@@ -1,3 +1,10 @@
+"""
+    Solution:
+    Keep shifting the leftmost to the right most unless the string become the initial string
+    If the string became the initial string: It is not equal False
+    If the string is equal to goal: It is equal True
+"""
+
 class Solution:
     def rotateString(self, s: str, goal: str) -> bool:
         def rotate_string(target):
@@ -10,6 +17,3 @@ class Solution:
             return rotate_string(res)
         
         return rotate_string(s)
-
-a = Solution()
-print(a.rotateString('abcde', 'abced'))
