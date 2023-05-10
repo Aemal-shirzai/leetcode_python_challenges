@@ -1,5 +1,5 @@
 from typing import Optional, List
-# Definition for singly-linked list.
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -28,3 +28,24 @@ class Solution:
             current = current.next
         head = head.next
         return head
+
+# Test Case
+  
+# node1 = ListNode(1)
+# node2 = ListNode(4)
+# node3 = ListNode(5)
+# node1.next = node2
+# node2.next = node3
+
+# node4 = ListNode(1)
+# node5 = ListNode(3)
+# node6 = ListNode(4)
+# node4.next = node5
+# node5.next = node6
+
+# node7 = ListNode(2)
+# node8 = ListNode(6)
+# node7.next = node8
+
+# obj = Solution()
+# obj.mergeKLists([node1, node4, node7])
