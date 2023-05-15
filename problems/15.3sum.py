@@ -10,24 +10,28 @@ class Solution:
         nums.sort()
         result = []
 
+        def twoSum(num, left, right):
+            if left >= right:
+                return
+
+            total_sum = num + nums[left] + nums[right]
+            if total_sum == 0:
+                result.append([num, nums[left], nums[right]])
+                left += 1
+                while nums[left] == nums[left - 1] and left < right:
+                    left += 1
+            elif total_sum < 0:
+                left += 1
+            else:
+                right -= 1
+
+            return twoSum(num, left, right)
+
         for index, num in enumerate(nums):
-       
             left = index + 1
             right = len(nums) - 1
-            
             if index > 0 and num == nums[index - 1]:
                 continue
-            
-            while left < right:
-                three_sum = num + nums[left] + nums[right]
-                if three_sum == 0:
-                    result.append([num, nums[left], nums[right]])
-                    left += 1
-                    while nums[left] == nums[left - 1] and left < right:
-                        left += 1
-                elif three_sum < 0:
-                    left += 1
-                else:
-                    right -= 1
+            twoSum(num, left, right)
 
         return result
