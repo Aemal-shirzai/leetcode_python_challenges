@@ -1,11 +1,3 @@
-from typing import List
-
-"""
-    Solution: 
-        For first number just using simple loop
-        for Second and third number we can use TwoSum solution and find the smallest difference.
-"""
-
 class Solution:
     def threeSumClosest(self, nums: List[int], target: int) -> int:
         nums.sort()
@@ -18,13 +10,13 @@ class Solution:
             nonlocal min_difference
 
             if left >= right:
-                return
+                return closest
 
             total_sum = num + nums[left] + nums[right]
 
             if total_sum == target:
                 closest = total_sum
-                return
+                return closest
             
             difference = abs(target - total_sum)
             if difference < min_difference:
@@ -45,6 +37,8 @@ class Solution:
             if index != 0 and nums[index] == nums[index-1]:
                 continue 
 
-            twoSum(num, left, right)
+            res = twoSum(num, left, right)
+            if res == target:
+                break
 
         return closest
