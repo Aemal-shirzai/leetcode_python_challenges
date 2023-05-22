@@ -1,7 +1,7 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        OPEN = ['(', '{' , '[']
-        CLOSE = [')', '}', ']']
+        OPEN = '({['
+        CLOSE = ')}]'
         MATCHES = {'(': ')', '{': '}', '[': ']'}
         open_stack = []
 
