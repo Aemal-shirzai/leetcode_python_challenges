@@ -2,7 +2,7 @@ from typing import Optional, List
 
 
 """
-    Solution: preorder means first finish left nodes and then start for right node.
+    Solution: preorder means: Start from root and first finish left nodes and then start for right node for each node.
 
 """
 
