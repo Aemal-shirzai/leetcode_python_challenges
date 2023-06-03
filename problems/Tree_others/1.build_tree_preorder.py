@@ -13,7 +13,7 @@ class TreeNode:
         self.right = right
 
 class Solution:
-    def createTree(self, data: List[int]) -> Optional[int]:
+    def createTree(self, data: List[int]) -> TreeNode:
         current_index = -1
 
         def build():
@@ -29,6 +29,7 @@ class Solution:
             return node
 
         return build()
+
 
 obj = Solution()
 root = obj.createTree([1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1])
