@@ -3,8 +3,8 @@ from typing import List
 """
     Solution:
         1. First Left Subtree
-        2. Root
-        3. Right Subtree
+        2. Right Subtree
+        3. Root
 """
 
 class TreeNode:
@@ -21,8 +21,8 @@ class Solution:
                 if not node:
                     return
                 traverse(node.left)
-                data.append(node.val)
                 traverse(node.right)
+                data.append(node.val)
 
             traverse(root)
             return data
