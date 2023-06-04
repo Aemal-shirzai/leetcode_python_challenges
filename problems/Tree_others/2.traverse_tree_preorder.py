@@ -12,7 +12,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
-class Solution1:
+class Solution:
     def traverseTree(self, root: TreeNode) -> List[int]:
         data = []
         
