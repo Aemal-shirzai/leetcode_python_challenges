@@ -32,3 +32,4 @@ class Solution:
 obj = Solution()
 # root = obj.buildBinarySearchTree([5,1,3,4,2,7])
 root = obj.buildBinarySearchTree([8,5,10,11,6,3,1,14,4])
+
