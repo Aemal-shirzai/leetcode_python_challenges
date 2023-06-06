@@ -16,9 +16,9 @@ class Solution:
                 print_val(node.left)
                 range_data.append(node.val)
                 print_val(node.right)
-            elif high < root.val: # go to left 
+            elif high <= node.val: # go to left 
                 print_val(node.left)
-            elif low > root.val: # go to right
+            else: # go to right
                 print_val(node.right)
 
             return range_data
