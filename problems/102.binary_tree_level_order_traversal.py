@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, List
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
